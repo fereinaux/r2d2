@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "Swagger R2D2",
-    "description": "\n\nSome useful links:\n- [The R2D2](https://github.com/Iniciativa-Padawan/r2d2-coruscant)",
+    "description": "Star Wars API\n\nSome useful links:\n- [The R2D2](https://github.com/Iniciativa-Padawan/r2d2-coruscant)",
     "version": "1.0.0"
   },
   "servers": [
