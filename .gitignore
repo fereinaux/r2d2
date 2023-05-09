@@ -6,6 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+#thunder client history
+thunder-tests/thunderActivity.json
+
 # history
 .history
 

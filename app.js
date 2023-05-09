@@ -1,15 +1,16 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const app = express();
-const routes = require('./starwars/movies/routes')
+const express = require('express')
+const bodyParser = require('body-parser');
+const movieRoutesTopic = require('./topic/movies/routes')
+const cors = require('cors')
+const port = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
-app.use('/', routes);
+const app = express()
+app.use(cors());
+app.use(bodyParser.json())
+app.use(movieRoutesTopic)
+
+app.listen(port, function () {
+  console.log(`O aplicativo está rodando na porta ${port}`)
+})
 
 
-
-
-
-app.listen(3000, () => {
-    console.log("Servidor rodando em http://localhost:3000/");
-  });

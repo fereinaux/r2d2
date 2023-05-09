@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "_id": "8b4edef6-d861-40eb-a1a3-565aa3f36a01",
+    "name": "local",
+    "default": false,
+    "sortNum": 10000,
+    "created": "2023-04-24T22:51:48.469Z",
+    "modified": "2023-04-24T22:51:48.469Z",
+    "data": [
+      {
+        "name": "url",
+        "value": "http://{{servidor}}:{{porta}}"
+      },
+      {
+        "name": "servidor",
+        "value": "localhost"
+      },
+      {
+        "name": "porta",
+        "value": "3000"
+      },
+      {
+        "name": "modulo",
+        "value": "topic"
+      }
+    ]
+  },
+  {
+    "_id": "4e356419-eab7-46b4-b147-1eb7ac04338e",
+    "name": "producao",
+    "default": true,
+    "sortNum": 20000,
+    "created": "2023-04-24T23:58:54.756Z",
+    "modified": "2023-04-24T23:58:54.756Z",
+    "data": [
+      {
+        "name": "url",
+        "value": "https://r2d2-enyt.onrender.com"
+      }
+    ]
+  }
+]
