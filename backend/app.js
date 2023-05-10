@@ -1,8 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-parser');
-const movieRoutesTopic = require('./topic/movies/routes')
+const movieRoutesTopic = require('./movies/routes')
 const cors = require('cors')
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 const app = express()
 app.use(cors());
