@@ -1,52 +1,23 @@
-import "./App.css";
-
-const lista = [
-  {
-    id: "clh8cwbop0000uxk43kkxcxkb",
-    name: "Phantom Menace",
-    year: 1999,
-    sequential: "1",
-    trilogy: "prequel",
-  },
-  {
-    id: "clh8bp4ug0000uxu810uvnkjv",
-    name: "Return of Jedi",
-    year: 1983,
-    sequential: "6",
-    trilogy: "original",
-  },
-  {
-    id: "clh8daz3c0000uxds6umu4f53",
-    name: "Attack of the Clones",
-    year: 2003,
-    sequential: "2",
-    trilogy: "prequel",
-  },
-  {
-    id: "clhfg21ks0000uxlw5dkjedjr",
-    name: "The Phantom Menace",
-    year: 1999,
-    sequential: "1",
-    trilogy: "prequel",
-  },
-  {
-    id: "clhibeloj0000gv1g3habhgq2",
-    name: "Revenge of the Sith",
-    year: 2005,
-    sequential: "3",
-    trilogy: "sequel",
-  },
-];
+import { useState, useEffect } from "react";
 
 function App() {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    fetch("https://r2d2-3yk4.onrender.com/movies").then((response) =>
+      response.json().then((json) => setMovies(json))
+    );
+  }, []);
+
   return (
     <>
-      <ul className="flex gap-8">
-        {lista.map((item) => (
+      <ul className="grid grid-cols-3 gap-8 w-full p-8">
+        {movies.map((item) => (
           <li
-            className="flex flex-col items-center justify-center w-40 h-32 bg-zinc-700 rounded-lg hover:bg-slate-800 cursor-pointer"
+            className="flex flex-col items-center justify-center w-full h-80 bg-zinc-700 rounded-lg hover:bg-slate-800 cursor-pointer"
             key={item.id}
           >
+            <img src={item.img} />
             <h2 className="text-2xl">{item.name}</h2>
             <span className="italic text-gray-400">{item.year}</span>
           </li>

@@ -24,7 +24,7 @@ const movieSchema = () => checkSchema({
     },
   },
   sequential: {
-    isString: {
+    isInt: {
       errorMessage: 'Sequencial do filme deve ser um inteiro',
     },
     isEmpty: {
