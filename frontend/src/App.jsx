@@ -14,12 +14,12 @@ function App() {
       <ul className="grid grid-cols-3 gap-8 w-full p-8">
         {movies.map((item) => (
           <li
-            className="group text-center m-20 border-2 border-sky-500 rounded-2xl relative bg-slate-800 cursor-pointer"
+            className="group text-center m-20 border-2 h-[285px] border-sky-500 rounded-2xl relative bg-slate-800 cursor-pointer"
             key={item.id}
           >
-            <div className="overflow-hidden rounded-2xl">
+            <div className="overflow-hidden h-full w-full rounded-2xl">
               <img
-                className="h-fit group-hover:scale-125 transition-all duration-500 cursor-pointer opacity-30 group-hover:opacity-70"
+                className="h-full group-hover:scale-125 transition-all duration-500 cursor-pointer opacity-30 group-hover:opacity-70"
                 src={item.img}
                 alt=""
               />
