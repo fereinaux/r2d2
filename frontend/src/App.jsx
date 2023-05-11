@@ -19,11 +19,32 @@ function App() {
           >
             <img src={item.img} />
             <h2 className="text-2xl">{item.name}</h2>
-            <span className="italic text-gray-400">{item.year}</span>
+            <Badge trilogy={item.trilogy} />
           </li>
         ))}
       </ul>
     </>
+  );
+}
+
+function Badge({ trilogy }) {
+  let cor = "red";
+
+  switch (trilogy) {
+    case "prequel":
+      cor = "blue";
+      break;
+    case "classic":
+      cor = "green";
+      break;
+    default:
+      break;
+  }
+
+  return (
+    <span className={`italic text-white bg-${cor}-600 rounded-xl p-2`}>
+      {trilogy}
+    </span>
   );
 }
 

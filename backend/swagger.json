@@ -167,6 +167,10 @@
             "type": "string",
             "example": "sequel | prequel | classic"
           },
+          "img": {
+            "type": "string",
+            "example": "https://imgurl.com"
+          },
           "year": {
             "type": "integer",
             "example": 1999

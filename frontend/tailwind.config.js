@@ -4,6 +4,11 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    'bg-red-600',
+    'bg-blue-600',
+    'bg-green-600',
+  ],
   theme: {
     extend: {},
   },
