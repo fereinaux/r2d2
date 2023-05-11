@@ -35,10 +35,10 @@ function App() {
         </div>
 
         {tooggleButtonText == "Grid" ? (
-          <ul className="grid grid-cols-3 gap-8 w-full p-8">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
             {movies.map((item) => (
               <li
-                className="group text-center m-20 border-2 h-[285px] border-sky-500 rounded-2xl relative bg-slate-800 cursor-pointer"
+                className="group flex items-center justify-center text-center max-w-[480px] border-2 h-[285px] border-sky-500 rounded-2xl relative bg-slate-800 cursor-pointer"
                 key={item.id}
               >
                 <div className="overflow-hidden h-full w-full rounded-2xl">
@@ -60,7 +60,7 @@ function App() {
           </ul>
         ) : (
           <div className="flex items-center h-full">
-            <table className="min-w-[600px] text-left text-sm font-light">
+            <table className="max-w-[600px] text-left text-sm font-light">
               <thead className="border-b font-medium dark:border-neutral-500">
                 <tr>
                   <th scope="col" className="px-6 py-4">
