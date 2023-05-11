@@ -14,12 +14,23 @@ function App() {
       <ul className="grid grid-cols-3 gap-8 w-full p-8">
         {movies.map((item) => (
           <li
-            className="flex flex-col items-center justify-center w-full h-80 bg-zinc-700 rounded-lg hover:bg-slate-800 cursor-pointer"
+            className="group text-center m-20 border-2 border-sky-500 rounded-2xl relative bg-slate-800 cursor-pointer"
             key={item.id}
           >
-            <img src={item.img} />
-            <h2 className="text-2xl">{item.name}</h2>
-            <Badge trilogy={item.trilogy} />
+            <div className="overflow-hidden rounded-2xl">
+              <img
+                className="h-fit group-hover:scale-125 transition-all duration-500 cursor-pointer opacity-30 hover:opacity-70"
+                src={item.img}
+                alt=""
+              />
+            </div>
+            <div className="absolute w-2/3 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <div className="flex flex-col gap-4 items-center justify-center">
+                <h2 className="text-3xl">{item.name}</h2>
+                <span className="italic">Release: {item.year}</span>
+                <Badge trilogy={item.trilogy} />
+              </div>
+            </div>
           </li>
         ))}
       </ul>
