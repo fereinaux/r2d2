@@ -19,7 +19,7 @@ function App() {
           >
             <div className="overflow-hidden rounded-2xl">
               <img
-                className="h-fit group-hover:scale-125 transition-all duration-500 cursor-pointer opacity-30 hover:opacity-70"
+                className="h-fit group-hover:scale-125 transition-all duration-500 cursor-pointer opacity-30 group-hover:opacity-70"
                 src={item.img}
                 alt=""
               />
