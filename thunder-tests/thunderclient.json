@@ -153,11 +153,11 @@
     "colId": "d5595a9b-3f55-492d-af8c-39c13635fe90",
     "containerId": "6a9d1f7b-7144-4849-a103-b53bd985c150",
     "name": "getById",
-    "url": "{{url}}/movies/clh8cwbop0000uxk43kkxcxkb",
+    "url": "{{url}}/movies/clhidj03p0000ev1gruieuoe4",
     "method": "GET",
     "sortNum": 12500,
     "created": "2023-05-04T00:10:57.574Z",
-    "modified": "2023-05-04T00:11:29.740Z",
+    "modified": "2023-05-15T22:56:28.130Z",
     "headers": [],
     "params": [],
     "tests": []
