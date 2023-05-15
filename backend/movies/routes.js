@@ -18,6 +18,15 @@ router.get('/movies', async (req, res) => {
     res.status(404).send('Não foi encontrado nenhum filme')
 })
 
+router.get('/movies/:id', async (req, res) => {
+  const movie = await controller.getMovieById(req.params.id)
+
+  if (movie)
+    res.send(movies)
+  else
+    res.status(404).send('Não foi encontrado nenhum filme')
+})
+
 router.get('/movies/:id/', async (req, res) => {
   const movie = await controller.getMovieById(req.params.id)
 
