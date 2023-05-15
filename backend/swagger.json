@@ -76,6 +76,27 @@
       }
     },
     "/movies/{movieId}": {
+      "get": {
+        "tags": ["movies"],
+        "summary": "Finds a Movie by Id",
+        "description": "Returns a movie",
+        "operationId": "findMovieById",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Movie"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No movies registered"
+          }
+        }
+      },
       "put": {
         "tags": ["movies"],
         "summary": "Update an existing movie",
