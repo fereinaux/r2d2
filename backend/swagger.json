@@ -23,17 +23,6 @@
         "summary": "Finds Movies",
         "description": "Returns a movie list",
         "operationId": "findMovies",
-        "parameters": [
-          {
-            "name": "movieId",
-            "in": "path",
-            "description": "Movie id to update",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "successful operation",
@@ -92,6 +81,17 @@
         "summary": "Finds a Movie by Id",
         "description": "Returns a movie",
         "operationId": "findMovieById",
+        "parameters": [
+          {
+            "name": "movieId",
+            "in": "path",
+            "description": "Movie id to update",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "successful operation",
