@@ -25,7 +25,7 @@ function Movie() {
 
   return (
     <>
-      <div className="w-full h-[350px] sticky top-0 object-cover">
+      <div className="w-full h-[350px] sticky top-0 object-cover z-10">
         <div className="flex justify-center h-full items-center">
           <img
             className="w-full h-full -top-20 left-0 right-0 absolute z-0 blur-md"
@@ -52,18 +52,12 @@ function Movie() {
           />
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center p-5 text-center">
+      <div className="flex flex-col justify-center items-center p-5 text-center ">
         <h4 className="text-3xl font-bold max-w-screen-sm mt-16 mb-1">
           {movie.name}
         </h4>
         <span className="italic">{movie.year}</span>
-        <p className="max-w-screen-sm mt-9">
-          Obi-Wan e seu mentor embarcam em uma perigosa aventura na tentativa de
-          salvar o planeta das garras de Darth Sidious. Durante a viagem, eles
-          conhecem um habilidoso menino e decidem treiná-lo para se tornar um
-          Jedi. Mas o tempo irá revelar que as coisas nem sempre são o que
-          aparentam ser.
-        </p>
+        <p className="max-w-screen-sm mt-9 px-5">{movie.description}</p>
       </div>
     </>
   );

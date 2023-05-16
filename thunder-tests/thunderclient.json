@@ -134,16 +134,16 @@
     "colId": "d5595a9b-3f55-492d-af8c-39c13635fe90",
     "containerId": "6a9d1f7b-7144-4849-a103-b53bd985c150",
     "name": "put",
-    "url": "{{url}}/movies/clh8bp4ug0000uxu810uvnkjv",
+    "url": "{{url}}/movies/clhpjddpz0002cg1gxrtw61qr",
     "method": "PUT",
     "sortNum": 30000,
     "created": "2023-05-02T00:23:43.309Z",
-    "modified": "2023-05-04T00:00:48.783Z",
+    "modified": "2023-05-16T01:18:15.332Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "  {\n    \"name\": \"Return of Jedi\",\n    \"year\": 1983,\n    \"sequential\": \"6\",\n    \"trilogy\": \"original\"\n  }",
+      "raw": "  {\n    \"name\": \"The Empire Strikes Back\",\n    \"year\": 1980,\n    \"sequential\": 5,\n    \"trilogy\": \"classic\",\n    \"img\": \"https://images.entertainment.ie/media/dMZxEdrWIzUmUoOz2zvmFuutbj7.jpg?w=1280&h=768&q=high\",\n    \"description\": \"It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden base and pursued them across the galaxy. Evading the dreaded Imperial Starfleet, a group of freedom fighters led by Luke Skywalker has established a new secret base on the remote ice world of Hoth. The evil lord Darth Vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes into the far reaches of space.\"\n  }",
       "form": []
     },
     "tests": []
