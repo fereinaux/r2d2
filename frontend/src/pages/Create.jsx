@@ -3,12 +3,14 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { getColorByTrilogy } from "../utils/colors";
 
 export default function Create() {
   const navigate = useNavigate();
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
@@ -40,6 +42,7 @@ export default function Create() {
           className=" w-7 h-7 absolute z-40 cursor-pointer top-12 left-4"
           icon="material-symbols:arrow-back-rounded"
         />
+
         <label htmlFor="name">Name</label>
         <input
           className={`rounded-lg p-2 w-full ${
@@ -54,13 +57,27 @@ export default function Create() {
           <span className="text-red-400">{errors.name.message}</span>
         )}
 
+        <label htmlFor="description">Description</label>
+        <textarea
+          className={`rounded-lg h-32 p-2 w-full ${
+            errors.description && "outline outline-2 outline-red-400"
+          }`}
+          id="description"
+          {...register("description", {
+            required: "description is required",
+          })}
+        />
+        {errors.description && (
+          <span className="text-red-400">{errors.description.message}</span>
+        )}
+
         <label htmlFor="trilogy">Trilogy</label>
 
         <select
           id="trilogy"
           className={`rounded-lg p-2 w-full ${
             errors.trilogy && "outline outline-2 outline-red-400"
-          }`}
+          } bg-${getColorByTrilogy(watch("trilogy"))}-900`}
           defaultValue={"classic"}
           {...register("trilogy", {
             required: "trilogy is required",

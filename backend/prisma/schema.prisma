@@ -11,10 +11,11 @@ datasource db {
 }
 
 model Movie {
-  id         String  @id @default(cuid())
-  name       String
-  year       Int
-  sequential Int
-  trilogy    String
-  img        String?
+  id          String  @id @default(cuid())
+  name        String
+  year        Int
+  sequential  Int
+  trilogy     String
+  img         String?
+  description String?
 }
