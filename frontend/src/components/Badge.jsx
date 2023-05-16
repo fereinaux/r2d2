@@ -1,24 +1,16 @@
 import PropTypes from "prop-types";
+import { getColorByTrilogy } from "../utils/colors";
 
 Badge.propTypes = {
   trilogy: PropTypes.string,
 };
 function Badge({ trilogy }) {
-  let cor = "red";
-
-  switch (trilogy) {
-    case "prequel":
-      cor = "blue";
-      break;
-    case "classic":
-      cor = "green";
-      break;
-    default:
-      break;
-  }
-
   return (
-    <span className={`italic text-white bg-${cor}-600 rounded-xl p-2`}>
+    <span
+      className={`italic text-white bg-${getColorByTrilogy(
+        trilogy
+      )}-900 bg- rounded-xl p-2`}
+    >
       {trilogy}
     </span>
   );

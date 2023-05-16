@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
+import { getColorByTrilogy } from "../utils/colors";
+import { Icon } from "@iconify/react";
 
 Movie.propTypes = {
   id: PropTypes.string,
 };
 function Movie() {
+  const navigate = useNavigate();
   const { id } = useParams();
 
   const [movie, setMovie] = useState({});
@@ -30,18 +33,31 @@ function Movie() {
             alt=""
           />
           <img
-            className="max-w-screen-sm w-full h-full object-cover object-top z-10"
+            className="max-w-screen-sm w-full h-full object-cover object-top z-20"
             src={movie.img}
             alt=""
           />
-          <div className="top-0 left-0 right-0 bottom-0 bg-black absolute opacity-75 z-20"></div>
+          <div
+            className={`top-0 left-0 right-0 bottom-0 bg-${getColorByTrilogy(
+              movie.trilogy
+            )}-900 absolute opacity-40 z-10`}
+          ></div>
+          <div
+            className={`top-0 left-0 right-0 bottom-0 bg-black absolute opacity-60 z-30`}
+          ></div>
+          <Icon
+            onClick={() => navigate("/")}
+            className=" w-7 h-7 absolute z-40 cursor-pointer top-4 left-4"
+            icon="material-symbols:arrow-back-rounded"
+          />
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center gap-6 p-5 text-center">
-        <h4 className="text-3xl font-bold max-w-screen-sm mt-16">
+      <div className="flex flex-col justify-center items-center p-5 text-center">
+        <h4 className="text-3xl font-bold max-w-screen-sm mt-16 mb-1">
           {movie.name}
         </h4>
-        <p className="max-w-screen-sm">
+        <span className="italic">{movie.year}</span>
+        <p className="max-w-screen-sm mt-9">
           Obi-Wan e seu mentor embarcam em uma perigosa aventura na tentativa de
           salvar o planeta das garras de Darth Sidious. Durante a viagem, eles
           conhecem um habilidoso menino e decidem treiná-lo para se tornar um

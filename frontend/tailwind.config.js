@@ -5,9 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [
-    'bg-red-600',
-    'bg-blue-600',
-    'bg-green-600',
+    'bg-cyan-900',
+    'bg-indigo-900',
+    'bg-emerald-900',
   ],
   theme: {
     extend: {},

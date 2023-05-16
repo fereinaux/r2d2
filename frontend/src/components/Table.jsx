@@ -1,4 +1,4 @@
-import { Link, useNavigate, useRoutes } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Badge from "./Badge";
 import PropTypes from "prop-types";
 
